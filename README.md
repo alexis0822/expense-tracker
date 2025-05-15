@@ -27,19 +27,30 @@ git clone https://github.com/alexis0822/expense-tracker.git
 2. Install dependencies:
 ```
 npm install
+
 ```
 
-3. Set up environment variables
+3. Set up backend (MongoDB)
 ```
-cp .env.example .env
-# Edit .env with your MongoDB credentials
+brew services start mongodb-community
+
 ```
 
-4. Start the development server:
+4. Start the server:
 ```
-npm start
+node server.js
+
 ```
 
-5. Access the application at:
+5. Start a local web server
 ```
-http://localhost:3000
+npx http-server -p 5500
+
+```
+
+6. Open the app on your browser
+```
+http://127.0.0.1:5500
+http://192.168.0.5:5500
+
+```
