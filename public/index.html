@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="expense-tracker.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+        <h3>Created by Alexis Negron for CCOM4308 😃</h3>
+    </header>
+    <main>
+        <form id="expense-form">
+            <h2>New Expense</h2>
+            <div class="form-group">
+                <input type="text" id="expense-name" placeholder="Description" required>
+                <input type="number" id="expense-amount" placeholder="Amount" min="0.01" step="0.01" required>
+                <input type="text" id="expense-payee" placeholder="Payee" required>
+                <select id="expense-category" required>
+                    <option value="" disabled selected>Loading categories...</option>
+                </select>
+            </div>
+            <button type="button" id="add-btn">Add Expense</button>
+        </form>
+        
+        <fieldset>
+            <legend><h2>Expense Overview</h2></legend>
+            <div class="chart-wrapper">
+                <div class="chart-container">
+                    <canvas id="expense-chart"></canvas>
+                </div>
+            </div>
+        </fieldset>
+        
+        <section class="expense-list-section">
+            <div class="section-header">
+                <h2>Expense List</h2>
+                <div class="total-wrapper">
+                    Total: <span id="total-expenses">$0.00</span>
+                </div>
+            </div>
+            <ul id="expense-list">
+                <li>Loading expenses...</li>
+            </ul>
+        </section>
+        
+        <fieldset class="categories-section">
+            <legend><h2>Manage Categories</h2></legend>
+            <div class="category-manager">
+                <div class="category-form">
+                    <div class="input-group">
+                        <input type="text" id="new-category-name" placeholder="Enter new category name">
+                        <button type="button" id="add-category-btn" class="primary-button">
+                            <span class="button-text">Add Category</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="category-list-container">
+                    <h3>Current Categories</h3>
+                    <div id="category-list" class="category-grid">
+                        <!-- Categories will be listed here -->
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <script type="module" src="./expense-tracker.js"></script>
+    </main>
+</body>
+</html>
