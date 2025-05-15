@@ -2,8 +2,6 @@
 
 A full-stack expense tracking application built with Node.js, Express, and MongoDB.
 
-![Screenshot](public/proj_pic.png)
-
 ## Features
 - Add/edit/delete expenses
 - Categorize expenses
