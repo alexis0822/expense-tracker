@@ -19,36 +19,30 @@ A full-stack expense tracking application built with Node.js, Express, and Mongo
 1. Clone the repository:
 ```
 git clone https://github.com/alexis0822/expense-tracker.git
-
 ```
 
 2. Install dependencies:
 ```
 npm install
-
 ```
 
 3. Set up backend (MongoDB)
 ```
 brew services start mongodb-community
-
 ```
 
 4. Start the server:
 ```
 node server.js
-
 ```
 
 5. Start a local web server
 ```
 npx http-server -p 5500
-
 ```
 
 6. Open the app on your browser
 ```
 http://127.0.0.1:5500
 http://192.168.0.5:5500
-
 ```
